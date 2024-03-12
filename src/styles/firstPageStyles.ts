@@ -39,7 +39,8 @@ export const styles1 = {
     fontSize: "16px", // Tamanho da fonte
     color: "orange", // Cor do texto
     borderRadius: "8px", // Borda arredondada
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)", // Sombra ao redor da caixa de texto
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
+    textJustify: "inter-word"
   },
   footer: {
     display: "flex",

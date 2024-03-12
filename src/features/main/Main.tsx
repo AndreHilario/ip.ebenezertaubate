@@ -1,9 +1,8 @@
 import { Box } from "@mui/material";
 import FirstPage from "../home/FirstPage";
-import FourtyPage from "../home/FourtyPage";
 import SecondPage from "../home/SecondPage";
-import ThirdPage from "../home/ThirdPage";
 import { styles1 } from "../../styles/firstPageStyles";
+import WhatsAppIconComponent from "../../components/WhatsApp/WhatsAppIcon";
 
 export default function Main() {
   return (
@@ -12,8 +11,7 @@ export default function Main() {
         <FirstPage />
       </Box>
       <SecondPage />
-      <ThirdPage />
-      <FourtyPage />
+      <WhatsAppIconComponent />
     </>
   );
 }

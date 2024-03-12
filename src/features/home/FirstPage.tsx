@@ -1,11 +1,16 @@
 import { Box } from "@mui/material";
-import { fisrtPageText } from "../../db/exportTextsToSite";
+import { fisrtPageText, whatsAppMessage } from "../../db/exportTextsToSite";
 import { styles1 } from "../../styles/firstPageStyles";
 import image from "../../assets/image.png";
 import { useState } from "react";
 
 export default function FirstPage() {
   const [isHovered, setIsHovered] = useState(false);
+
+  const openWhatsAppChat = () => {
+    window.open(`https://wa.me/5512982245338?text=${encodeURIComponent(whatsAppMessage)}`, '_blank');
+  };
+
   return (
     <Box sx={styles1.container}>
       <Box sx={styles1.mainBox}>
@@ -17,16 +22,17 @@ export default function FirstPage() {
         <Box
           sx={{
             ...styles1.footer,
-            "&:hover": styles1.buttonHover, // Aplica os estilos de hover quando o mouse passa sobre o botão
+            "&:hover": styles1.buttonHover, 
           }}
         >
           <button
             style={{
               ...styles1.button,
-              ...(isHovered && styles1.buttonHover), // Aplica os estilos de hover quando o mouse passa sobre o botão
+              ...(isHovered && styles1.buttonHover), 
             }}
-            onMouseEnter={() => setIsHovered(true)} // Define o estado do hover como verdadeiro quando o mouse entra no botão
-            onMouseLeave={() => setIsHovered(false)} // Define o estado do hover como falso quando o mouse sai do botão
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)} 
+            onClick={openWhatsAppChat}
           >
             {fisrtPageText.footer}
           </button>
