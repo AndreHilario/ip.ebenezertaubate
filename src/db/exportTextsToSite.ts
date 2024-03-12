@@ -1,5 +1,7 @@
 export const fisrtPageText = {
-  text: `Tome as melhores decisões financeiras com um acompanhamento personalizado. Receba as melhores oportunidades do mercado, suporte de uma das melhores estruturas do Brasil e um acompanhamento para estruturar seus investimentos e finanças de uma vez por todas! Sim! Quero ter uma assessoria exclusiva!`,
+  title: `Tome as melhores decisões financeiras com um acompanhamento personalizado.`,
+  text: `Receba as melhores oportunidades do mercado, suporte de uma das melhores estruturas do Brasil e um acompanhamento para estruturar seus investimentos e finanças de uma vez por todas!`,
+  footer: `Sim! Quero ter uma assessoria exclusiva!`
 };
 
 export const secondPageText = {
