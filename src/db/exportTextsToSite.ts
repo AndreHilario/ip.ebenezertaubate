@@ -13,22 +13,18 @@ export const secondPageText = {
 };
 
 export const thirdPageText = {
-  text: `A assessoria foi feita pra você que:
-
-    1- Quer melhores resultados com investimentos
-    
-    2- Quer proteger a sua família em todos os momentos
-    
-    3- Quer um dia viver de renda passiva
-    
-    4- Quer caminhar com um profissional de confiança
-    
-    5- Quer tomar melhores decisões financeiras`,
+  text1: `A assessoria foi feita pra você que:`,
+  text2: `1 - Quer melhores resultados com investimentos`,
+  text3: `2 - Quer proteger a sua família em todos os momentos`,
+  text4: `3 - Quer um dia viver de renda passiva`,
+  text5: `4 - Quer caminhar com um profissional de confiança`,
+  text6: `5 - Quer tomar melhores decisões financeiras`,
 };
 
+
 export const fourtyPageText = {
-  text: `Chegou a hora de cuidar melhor do seu dinheiro e dos seus investimentos!
-  Sim! Quero esse atendimento!`,
+  text1: `Chegou a hora de cuidar melhor do seu dinheiro e dos seus investimentos!`,
+  text2: `Sim! Quero esse atendimento!`,
 };
 
 export const whatsAppMessage = `Olá Felipe, eu gostaria de saber mais sobre sua assessoria exclusiva!`;

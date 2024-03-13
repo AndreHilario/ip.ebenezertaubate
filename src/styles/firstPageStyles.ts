@@ -5,12 +5,16 @@
 // const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
 export const styles1 = {
-    container: {
-        width: "100%",
-        height: "800px",
-        backgroundColor: "#000",
-        boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)",
-    },
+  container: {
+    width: "100%",
+    height: "800px", // Alterado para ocupar toda a altura da tela
+    display: "flex",
+    flexDirection: "column", // Ajustado para colocar os elementos um em cima do outro
+    justifyContent: "center",
+    alignItems: "center",
+    background: "linear-gradient(to bottom right, #002147, #0055a5)", // Gradiente de azul escuro para azul claro
+    boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)",
+  },
   mainBox: {
     color: "orange"
   },
