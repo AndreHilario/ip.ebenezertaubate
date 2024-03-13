@@ -4,7 +4,7 @@ const Copyright = () => {
   return (
     <div>
       <p>
-        Acesse o{' '}
+        Acesse o meu{' '}
         <a
           href="https://www.instagram.com/felipehilario.investimentos/"
           target="_blank"
@@ -13,7 +13,6 @@ const Copyright = () => {
         >
           Instagram
         </a>{' '}
-        para saber mais informações.
       </p>
       <p>Direitos autorais © 2024 Felipe Hilário</p> <p>Todos os direitos reservados</p>
     </div>
