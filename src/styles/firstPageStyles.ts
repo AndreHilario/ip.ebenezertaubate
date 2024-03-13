@@ -12,8 +12,9 @@ export const styles1 = {
     flexDirection: "column", // Ajustado para colocar os elementos um em cima do outro
     justifyContent: "center",
     alignItems: "center",
-    background: "linear-gradient(to bottom right, #002147, #0055a5)", // Gradiente de azul escuro para azul claro
+    background: "linear-gradient(to bottom right, #002147, #000)", // Gradiente de azul escuro para azul claro
     boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)",
+    fontFamily: "Roboto, sans-serif"
   },
   mainBox: {
     color: "orange"
@@ -53,19 +54,20 @@ export const styles1 = {
     padding: "20px",
   },
   button: {
-    backgroundColor: "green", // Cor de fundo verde do botão
+    backgroundColor: "#002147",
     color: "#fff", // Cor do texto do botão
-    padding: "10px 20px", // Espaçamento interno do botão
+    padding: "15px 20px", // Espaçamento interno do botão
     border: "none", // Remove a borda do botão
     borderRadius: "4px", // Borda arredondada do botão
     cursor: "pointer", // Altera o cursor ao passar o mouse sobre o botão
     transition: "transform 0.3s, box-shadow 0.3s", // Adiciona uma transição para suavizar a mudança de tamanho e sombra do botão
-    boxShadow: "0px 0px 10px rgba(0, 128, 0, 10)", // Sombra inicialmente invisível
+    boxShadow: "0px 0px 20px rgba(0, 0, 255, 0.5)",
+    fontWeight: "bold"
   },
   // Estilo do botão quando o mouse está sobre ele
   buttonHover: {
     transform: "scale(1.1)", // Aumenta o tamanho do botão em 10%
-    boxShadow: "0px 0px 20px rgba(0, 128, 0, 0.5)", // Adiciona uma sombra maior e verde quando o mouse está sobre o botão
+    boxShadow: "0px 0px 20px rgba(0, 128, 0, 0.3)", // Adiciona uma sombra maior e verde quando o mouse está sobre o botão
   },
   imageBox: {
     display: "flex",
@@ -77,7 +79,7 @@ export const styles1 = {
     width: "50%",
     height: "auto",
     maxWidth: "100%",
-    border: "4px solid orange",
+    background: "linear-gradient(to bottom right, #002147, #000)",
     borderRadius: "10px", 
     boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)"
   },
