@@ -1,12 +1,15 @@
 import { Box, Button } from "@mui/material";
 import { fourtyPageText, whatsAppMessage } from "../../db/exportTextsToSite";
-import '../../styles/fourtyPageStyles.css';
+import "../../styles/fourtyPageStyles.css";
 
 export default function FourtyPage() {
   const openWhatsAppChat = () => {
-    window.open(`https://wa.me/5512982245338?text=${encodeURIComponent(whatsAppMessage)}`, '_blank');
+    window.open(
+      `https://wa.me/5512982245338?text=${encodeURIComponent(whatsAppMessage)}`,
+      "_blank"
+    );
   };
-  
+
   return (
     <Box
       sx={{
@@ -32,7 +35,7 @@ export default function FourtyPage() {
           borderRadius: "10px",
           fontSize: "18px",
           fontFamily: "Roboto, Arial, sans-serif",
-          marginTop: "20px"
+          marginTop: "20px",
         }}
         onClick={openWhatsAppChat}
       >
