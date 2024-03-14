@@ -17,13 +17,18 @@ export const styles1 = {
     fontFamily: "Roboto, sans-serif"
   },
   mainBox: {
-    color: "orange"
+    display: "flex",
+    flexDirection: "column", // Ajustado para colocar os elementos um em cima do outro
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     padding: "20px",
+    marginRight: "5px",
+    width: "80%",
     color: "#fff",
     fontWeight: "bold",
     textAlign: "center",
@@ -45,6 +50,7 @@ export const styles1 = {
     color: "orange", // Cor do texto
     borderRadius: "8px", // Borda arredondada
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
+    textAlign: "center",
     textJustify: "inter-word"
   },
   footer: {
