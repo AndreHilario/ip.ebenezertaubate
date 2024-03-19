@@ -27,9 +27,7 @@ const Footer = () => {
         justifyContent: "center",
         color: '#fff',
         width: '100%', 
-        backgroundColor: '#333',
-        padding: "20px",
-        maxWidth: "100%" 
+        backgroundColor: '#333', 
       }}
     >
       <Copyright />
