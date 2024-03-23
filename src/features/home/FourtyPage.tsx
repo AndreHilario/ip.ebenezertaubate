@@ -23,7 +23,7 @@ export default function FourtyPage() {
         fontFamily: "Roboto, Arial, sans-serif",
       }}
     >
-      <p style={{ color: "#fff", fontSize: "24px", textAlign: "center" }}>
+      <p style={{ color: "#fff", fontSize: "24px", textAlign: "center", padding: "10px" }}>
         {fourtyPageText.text1}
       </p>
       <Button
@@ -33,7 +33,7 @@ export default function FourtyPage() {
           color: "#fff",
           padding: "15px 30px",
           borderRadius: "10px",
-          fontSize: "18px",
+          fontSize: "16px",
           fontFamily: "Roboto, Arial, sans-serif",
           marginTop: "20px",
         }}

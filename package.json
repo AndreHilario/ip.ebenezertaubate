@@ -14,12 +14,17 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.12",
     "@mui/material": "^5.15.12",
+    "exceljs": "^4.4.0",
+    "google-spreadsheet": "^4.1.1",
+    "nodemailer": "^6.9.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-toastify": "^10.0.4"
   },
   "devDependencies": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "@types/nodemailer": "^6.4.14",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
@@ -29,8 +34,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
-    "vite": "^5.1.4",
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
+    "vite": "^5.1.4"
   },
   "resolutions": {
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
