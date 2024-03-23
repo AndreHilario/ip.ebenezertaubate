@@ -80,6 +80,7 @@ export const styles1 = {
     justifyContent: "center",
     alignItems: "center",
     padding: "20px",
+    marginTop: "40px"
   },
   image: {
     width: "50%",
