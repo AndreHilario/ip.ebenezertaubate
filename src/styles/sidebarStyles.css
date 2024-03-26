@@ -20,7 +20,6 @@
 	}
 #lateral:before {
 	z-index:1000;
-	content: url(icone-menu.png);
 	font-size:4em;
 	color:white;
 	position:fixed;
