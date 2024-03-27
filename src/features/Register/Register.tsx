@@ -140,7 +140,7 @@ const FormularioCadastro = () => {
                 disabled={!nome || !telefone || !email || !selectedOption}
                 onClick={cadastrar}
               >
-                Confirmar
+                <b>Confirmar</b>
               </Button>
             </div>
 
