@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../../styles/registerPageStyles.css";
-import Header from "../../components/Header/Header";
-import { Select, MenuItem, Button, Box, FormControl, InputLabel } from "@mui/material";
+import { Select, MenuItem, Button, FormControl, InputLabel } from "@mui/material";
 
 const FormularioCadastro = () => {
   const [nome, setNome] = useState("");
@@ -55,9 +54,6 @@ const FormularioCadastro = () => {
 
   return (
     <>
-      <Box sx={{ marginBottom: "60px" }}>
-        <Header />
-      </Box>
       <div className="body">
         <div className="container">
           <div className="card">

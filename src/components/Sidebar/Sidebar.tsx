@@ -44,6 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar }) => {
           <Link
             to="/cadastro"
             className="menu-link"
+            onClick={toggleSidebar}
             style={{ textAlign: "center" }}
           >
             Faça seu cadastro
