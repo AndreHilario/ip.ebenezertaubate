@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../styles/registerPageStyles.css";
 import Header from "../../components/Header/Header";
+import { Select, MenuItem, Button, Box, FormControl, InputLabel } from "@mui/material";
 
 const FormularioCadastro = () => {
   const [nome, setNome] = useState("");
@@ -11,6 +12,7 @@ const FormularioCadastro = () => {
   const handleSelectChange = (event: any) => {
     setSelectedOption(event.target.value);
   };
+
   const handleNomeChange = (event: any) => {
     setNome(event.target.value);
   };
@@ -53,9 +55,10 @@ const FormularioCadastro = () => {
 
   return (
     <>
-      <div className="body">
+      <Box sx={{ marginBottom: "60px" }}>
         <Header />
-
+      </Box>
+      <div className="body">
         <div className="container">
           <div className="card">
             <h1> Cadastrar</h1>
@@ -93,32 +96,55 @@ const FormularioCadastro = () => {
                 onChange={handleEmailChange}
                 required
               />
-              <label htmlFor="email">Email</label>
+               <label htmlFor="email">Email</label>
             </div>
-            <div>
-              <label htmlFor="patrimonioSelect">
-                Selecione a faixa de patrimônio:
-              </label>
-              <select
-                id="patrimonioSelect"
+            <FormControl variant="outlined" fullWidth>
+              <InputLabel id="patrimonioLabel"><b>Patrimônio</b></InputLabel>
+              <Select
                 value={selectedOption}
                 onChange={handleSelectChange}
+                labelId="patrimonioLabel"
+                label="Patrimônio"
               >
-                <option value="">Selecione...</option>
-                <option value="faixa1">Até R$ 100.000</option>
-                <option value="faixa2">R$ 100.001 - R$ 500.000</option>
-                <option value="faixa3">R$ 500.001 - R$ 1.000.000</option>
-                <option value="faixa4">Acima de R$ 1.000.000</option>
-              </select>
-              {selectedOption && (
-                <p>Você selecionou a faixa de patrimônio: {selectedOption}</p>
-              )}
-            </div>
-            <div className="justif-center">
-              <button onClick={cadastrar}>Confirmar</button>
+                <MenuItem value="">
+                  <em>Limpar</em>
+                </MenuItem>
+                <MenuItem value="100.000">Até R$ 100.000</MenuItem>
+                <MenuItem value="100.001 - R$ 500.000">
+                  R$ 100.001 - R$ 500.000
+                </MenuItem>
+                <MenuItem value="500.001 - R$ 1.000.000">
+                  R$ 500.001 - R$ 1.000.000
+                </MenuItem>
+                <MenuItem value="1.000.000+">Acima de R$ 1.000.000</MenuItem>
+              </Select>
+            </FormControl>
+
+
+            {selectedOption && nome && email && telefone && (
+              <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+                <b>Agora é só confirmar!</b>
+              </div>
+            )}
+
+            <div
+              style={{
+                marginTop: "20px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                variant="contained"
+                color="primary"
+                disabled={!nome || !telefone || !email || !selectedOption}
+                onClick={cadastrar}
+              >
+                Confirmar
+              </Button>
             </div>
 
-            <div className="justif-center">
+            <div style={{ marginTop: "20px" }}>
               <hr />
             </div>
           </div>

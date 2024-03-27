@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh; /* Define a altura do body como a altura da viewport */
+    height: 100vh;
 }
 
 
@@ -13,7 +13,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 150px;
 }
 
 .card{
@@ -21,7 +20,8 @@
     padding: 30px;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #00000060; 
-    width: 400px;
+    width: 80%;
+    margin-top: 100px;
 }
 
 h1{
