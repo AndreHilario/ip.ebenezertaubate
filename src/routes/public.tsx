@@ -10,5 +10,13 @@ export const publicRoutes = [
     path: "/cadastro",
     element: <Register />,
   },
+  // {
+  //   path: "/live",
+  //   element: <Register />,
+  // },
+  // {
+  //   path: "/cadastro",
+  //   element: <Register />,
+  // },
 
 ];
