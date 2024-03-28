@@ -16,6 +16,7 @@ const FormularioCadastro = () => {
   const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSelectChange = (event: any) => {
     setSelectedOption(event.target.value);
@@ -35,6 +36,7 @@ const FormularioCadastro = () => {
 
   const cadastrar = async () => {
     try {
+      setIsLoading(true);
       const response = await fetch(
         `https://v1.nocodeapi.com/andrehilario/google_sheets/bjwfBlnVJgTAYLOp?tabId=DB`,
         {
@@ -51,15 +53,18 @@ const FormularioCadastro = () => {
           "Dados enviados com sucesso para a planilha do Google Sheets."
         );
       } else {
+        setIsLoading(false);
         console.error(
           "Erro ao enviar os dados para a planilha:",
           response.statusText
         );
       }
     } catch (error) {
+      setIsLoading(false);
       console.error("Erro ao enviar os dados para a planilha:", error);
       toast.error("Erro ao enviar os dados.");
     } finally {
+      setIsLoading(false);
       toast.success(
         "Dados enviados com sucesso! Aguarde a confirmação no seu email!"
       );
@@ -168,10 +173,10 @@ const FormularioCadastro = () => {
               <Button
                 variant="contained"
                 color="primary"
-                disabled={!nome || !telefone || !email || !selectedOption}
+                disabled={!nome || !telefone || !email || !selectedOption || isLoading}
                 onClick={cadastrar}
               >
-                <b>Confirmar</b>
+                <b>{isLoading ? "Carregando..." : "Confirmar"}</b>
               </Button>
             </div>
 
