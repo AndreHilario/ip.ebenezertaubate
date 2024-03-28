@@ -1,6 +1,14 @@
 import { useState } from "react";
 import "../../styles/registerPageStyles.css";
-import { Select, MenuItem, Button, FormControl, InputLabel } from "@mui/material";
+import {
+  Select,
+  MenuItem,
+  Button,
+  FormControl,
+  InputLabel,
+  Box,
+} from "@mui/material";
+import { ToastContainer, toast } from "react-toastify";
 
 const FormularioCadastro = () => {
   const [nome, setNome] = useState("");
@@ -33,7 +41,7 @@ const FormularioCadastro = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify([[nome, telefone, email]]),
+          body: JSON.stringify([[nome, telefone, email, selectedOption]]),
         }
       );
       await response.json();
@@ -49,11 +57,17 @@ const FormularioCadastro = () => {
       }
     } catch (error) {
       console.error("Erro ao enviar os dados para a planilha:", error);
+      toast.error("Erro ao enviar os dados.");
+    } finally {
+      toast.success("Dados enviados com sucesso! Aguarde e confirme o seu email!");
     }
   };
 
   return (
     <>
+      <Box sx={{marginTop: "30px"}}>
+        <ToastContainer />
+      </Box>
       <div className="body">
         <div className="container">
           <div className="card">
@@ -92,10 +106,12 @@ const FormularioCadastro = () => {
                 onChange={handleEmailChange}
                 required
               />
-               <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email</label>
             </div>
             <FormControl variant="outlined" fullWidth>
-              <InputLabel id="patrimonioLabel"><b>Patrimônio</b></InputLabel>
+              <InputLabel id="patrimonioLabel">
+                <b>Patrimônio</b>
+              </InputLabel>
               <Select
                 value={selectedOption}
                 onChange={handleSelectChange}
@@ -105,20 +121,34 @@ const FormularioCadastro = () => {
                 <MenuItem value="">
                   <em>Limpar</em>
                 </MenuItem>
-                <MenuItem value="100.000">Até R$ 100.000</MenuItem>
-                <MenuItem value="100.001 - R$ 500.000">
-                  R$ 100.001 - R$ 500.000
+                <MenuItem value="0-50.000">Abaixo de R$ 50 mil</MenuItem>
+                <MenuItem value="50.00-150.000">
+                  Entre R$ 50 mil e R$ 150 mil
                 </MenuItem>
-                <MenuItem value="500.001 - R$ 1.000.000">
-                  R$ 500.001 - R$ 1.000.000
+                <MenuItem value="150.001-300.000">
+                  Entre R$ 150 mil e R$ 300 mil
                 </MenuItem>
-                <MenuItem value="1.000.000+">Acima de R$ 1.000.000</MenuItem>
+                <MenuItem value="300.001-500.000">
+                  Entre R$ 300 mil e R$ 500 mil
+                </MenuItem>
+                <MenuItem value="500.001-1.000.000">
+                  Entre R$ 500 mil e R$ 1 milhão
+                </MenuItem>
+                <MenuItem value="1.000.001-5.000.000">
+                  Entre R$ 1 milhão e R$ 5 milhões
+                </MenuItem>
+                <MenuItem value="5.000.000+">Mais de R$ 5 milhões</MenuItem>
               </Select>
             </FormControl>
 
-
             {selectedOption && nome && email && telefone && (
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "10px",
+                }}
+              >
                 <b>Agora é só confirmar!</b>
               </div>
             )}
