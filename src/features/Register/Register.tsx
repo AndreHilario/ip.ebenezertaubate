@@ -9,6 +9,7 @@ import {
   Box,
 } from "@mui/material";
 import { ToastContainer, toast } from "react-toastify";
+import InputMask from "react-input-mask";
 
 const FormularioCadastro = () => {
   const [nome, setNome] = useState("");
@@ -59,13 +60,15 @@ const FormularioCadastro = () => {
       console.error("Erro ao enviar os dados para a planilha:", error);
       toast.error("Erro ao enviar os dados.");
     } finally {
-      toast.success("Dados enviados com sucesso! Aguarde e confirme o seu email!");
+      toast.success(
+        "Dados enviados com sucesso! Aguarde e confirme o seu email!"
+      );
     }
   };
 
   return (
     <>
-      <Box sx={{marginTop: "30px"}}>
+      <Box sx={{ marginTop: "30px" }}>
         <ToastContainer />
       </Box>
       <div className="body">
@@ -86,7 +89,9 @@ const FormularioCadastro = () => {
             </div>
 
             <div className="label-float">
-              <input
+              <InputMask
+                mask="(99) 99999-9999"
+                maskChar="_"
                 type="tel"
                 id="telefone"
                 placeholder=" "
