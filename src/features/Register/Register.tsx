@@ -68,7 +68,7 @@ const FormularioCadastro = () => {
 
   return (
     <>
-      <Box sx={{ marginTop: "30px" }}>
+      <Box>
         <ToastContainer />
       </Box>
       <div className="body">
