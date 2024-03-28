@@ -61,7 +61,7 @@ const FormularioCadastro = () => {
       toast.error("Erro ao enviar os dados.");
     } finally {
       toast.success(
-        "Dados enviados com sucesso! Aguarde e confirme o seu email!"
+        "Dados enviados com sucesso! Aguarde a confirmação no seu email!"
       );
     }
   };
