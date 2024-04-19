@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "../../styles/registerPageStyles.css";
 import {
   Select,
@@ -10,6 +10,35 @@ import {
 } from "@mui/material";
 import { ToastContainer, toast } from "react-toastify";
 import InputMask from "react-input-mask";
+import emailjs from "@emailjs/browser";
+import ReactPixel from 'react-facebook-pixel';
+
+const sendEmail = async (email: string, nome: string) => {
+  const pdfPath =
+    "../../assets/TABELA DE PRÉ-LANÇAMENTO 24MESES 02-01-2024 - TAÍBA.pdf"; // Substitua pelo caminho correto
+  const pdfContent = await fetch(pdfPath).then((response) => response.blob());
+  const reader = new FileReader();
+  reader.readAsDataURL(pdfContent);
+  reader.onloadend = async function () {
+    const base64data = reader.result;
+
+    // Parâmetros do modelo de e-mail
+    const templateParams = {
+      to_name: nome,
+      email: email,
+      content: base64data,
+    };
+    await emailjs
+      .send(
+        "service_y1x4pmh",
+        "template_0z48519",
+        templateParams,
+        "J2FL_h3wphLl7ke8l"
+      )
+      .then(() => console.log("Sucesso"))
+      .catch(() => console.error("Erro"));
+  };
+};
 
 const FormularioCadastro = () => {
   const [nome, setNome] = useState("");
@@ -17,20 +46,26 @@ const FormularioCadastro = () => {
   const [email, setEmail] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const inputRef = useRef(null);
+  ReactPixel.pageView();
 
   const handleSelectChange = (event: any) => {
+    ReactPixel.track(event, event.target.value);
     setSelectedOption(event.target.value);
   };
 
   const handleNomeChange = (event: any) => {
+    ReactPixel.track(event, event.target.value);
     setNome(event.target.value);
   };
 
   const handleTelefoneChange = (event: any) => {
+    ReactPixel.track(event, event.target.value);
     setTelefone(event.target.value);
   };
 
   const handleEmailChange = (event: any) => {
+    ReactPixel.track(event, event.target.value);
     setEmail(event.target.value);
   };
 
@@ -68,6 +103,7 @@ const FormularioCadastro = () => {
       toast.success(
         "Dados enviados com sucesso! Aguarde a confirmação no seu email!"
       );
+      await sendEmail(email, nome);
     }
   };
 
@@ -102,6 +138,7 @@ const FormularioCadastro = () => {
                 placeholder=" "
                 value={telefone}
                 onChange={handleTelefoneChange}
+                inputRef={inputRef}
                 required
               />
               <label htmlFor="telefone">Telefone</label>
@@ -173,7 +210,9 @@ const FormularioCadastro = () => {
               <Button
                 variant="contained"
                 color="primary"
-                disabled={!nome || !telefone || !email || !selectedOption || isLoading}
+                disabled={
+                  !nome || !telefone || !email || !selectedOption || isLoading
+                }
                 onClick={cadastrar}
               >
                 <b>{isLoading ? "Carregando..." : "Confirmar"}</b>

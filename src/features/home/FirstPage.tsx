@@ -3,10 +3,11 @@ import { fisrtPageText, whatsAppMessage } from "../../db/exportTextsToSite";
 import { styles1 } from "../../styles/firstPageStyles";
 import image from "../../assets/image.png";
 import { useState } from "react";
+import ReactPixel from 'react-facebook-pixel';
 
 export default function FirstPage() {
   const [isHovered, setIsHovered] = useState(false);
-
+  ReactPixel.pageView();
   const openWhatsAppChat = () => {
     window.open(`https://wa.me/5512982245338?text=${encodeURIComponent(whatsAppMessage)}`, '_blank');
   };
