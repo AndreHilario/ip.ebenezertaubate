@@ -50,22 +50,22 @@ const FormularioCadastro = () => {
   ReactPixel.pageView();
 
   const handleSelectChange = (event: any) => {
-    ReactPixel.track(event, event.target.value);
+    ReactPixel.track(event.target.value, event);
     setSelectedOption(event.target.value);
   };
 
   const handleNomeChange = (event: any) => {
-    ReactPixel.track(event, event.target.value);
+    ReactPixel.track(event.target.value, event);
     setNome(event.target.value);
   };
 
   const handleTelefoneChange = (event: any) => {
-    ReactPixel.track(event, event.target.value);
+    ReactPixel.track(event.target.value, event);
     setTelefone(event.target.value);
   };
 
   const handleEmailChange = (event: any) => {
-    ReactPixel.track(event, event.target.value);
+    ReactPixel.track(event.target.value, event);
     setEmail(event.target.value);
   };
 
