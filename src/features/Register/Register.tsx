@@ -13,32 +13,24 @@ import InputMask from "react-input-mask";
 import emailjs from "@emailjs/browser";
 import ReactPixel from 'react-facebook-pixel';
 
-const sendEmail = async (email: string, nome: string) => {
-  const pdfPath =
-    "../../assets/TABELA DE PRÉ-LANÇAMENTO 24MESES 02-01-2024 - TAÍBA.pdf"; // Substitua pelo caminho correto
-  const pdfContent = await fetch(pdfPath).then((response) => response.blob());
-  const reader = new FileReader();
-  reader.readAsDataURL(pdfContent);
-  reader.onloadend = async function () {
-    const base64data = reader.result;
-
-    // Parâmetros do modelo de e-mail
-    const templateParams = {
-      to_name: nome,
-      email: email,
-      content: base64data,
-    };
-    await emailjs
-      .send(
-        "service_y1x4pmh",
-        "template_0z48519",
-        templateParams,
-        "J2FL_h3wphLl7ke8l"
-      )
-      .then(() => console.log("Sucesso"))
-      .catch(() => console.error("Erro"));
+const sendEmail = async (email: string, nome: string, content: string | ArrayBuffer | Blob) => {
+  const templateParams = {
+    to_name: nome,
+    email: email,
+    content: content, // Certifique-se de que content é passado corretamente
   };
+
+  await emailjs
+    .send(
+      "service_y1x4pmh",
+      "template_n2g6v9j",
+      templateParams,
+      "J2FL_h3wphLl7ke8l"
+    )
+    .then(() => console.log("Sucesso"))
+    .catch(() => console.error("Erro"));
 };
+
 
 const FormularioCadastro = () => {
   const [nome, setNome] = useState("");
@@ -70,6 +62,8 @@ const FormularioCadastro = () => {
   };
 
   const cadastrar = async () => {
+    const pdfPath = "../../assets/TABELA DE PRÉ-LANÇAMENTO 24MESES 02-01-2024 - TAÍBA.pdf";
+    const pdfContent = await fetch(pdfPath).then((response) => response.blob());
     try {
       setIsLoading(true);
       const response = await fetch(
@@ -103,7 +97,7 @@ const FormularioCadastro = () => {
       toast.success(
         "Dados enviados com sucesso! Aguarde a confirmação no seu email!"
       );
-      await sendEmail(email, nome);
+      await sendEmail(email, nome, pdfContent);
     }
   };
 
