@@ -20,7 +20,7 @@ export default function FistPage() {
     );
   };
   const handleInstagramRedirect = () => {
-    window.open("https://www.instagram.com/seu_usuario", "_blank");
+    window.open("https://www.instagram.com/felipehilario.investimentos", "_blank");
   };
   const handleEmailRedirect = () => {
     window.location.href = "mailto:seu_email@dominio.com";
