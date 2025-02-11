@@ -85,7 +85,7 @@ export default function FistPage() {
               color: "white",
               backgroundColor: "transparent",
               width: "100%",
-              height: 100, // Aumente esta altura se necessário para acomodar texto e imagem
+              height: 100, 
               borderRadius: 50,
               textTransform: "none",
               display: "flex",
@@ -93,7 +93,7 @@ export default function FistPage() {
               alignItems: "center",
               position: "relative",
               paddingLeft: 2,
-              paddingRight: 2, // Alinhe melhor o texto
+              paddingRight: 2, 
               transition: "all 0.3s ease",
               "&:hover": {
                 backgroundColor: "white",
@@ -106,7 +106,7 @@ export default function FistPage() {
               src={profileImage}
               alt="Ícone botão"
               sx={{
-                width: 60, // Aumentar o tamanho da imagem
+                width: 60, 
                 height: 60,
                 position: "absolute",
                 left: 10,
