@@ -1,23 +1,10 @@
-import { Box } from "@mui/material";
-import FirstPage from "../home/FirstPage";
-import SecondPage from "../home/SecondPage";
-import { styles1 } from "../../styles/firstPageStyles";
-import WhatsAppIconComponent from "../../components/WhatsApp/WhatsAppIcon";
-import ThirdPage from "../home/ThirdPage";
-import FourtyPage from "../home/FourtyPage";
-import Footer from "../../components/Footer/Copyright";
+import { Stack } from "@mui/material";
+import FistPage from "../home/FirstPage";
 
 export default function Main() {
   return (
-    <>
-      <Box sx={styles1.container}>
-        <FirstPage />
-      </Box>
-      <SecondPage />
-      <ThirdPage />
-      <FourtyPage />
-      <Footer />
-      <WhatsAppIconComponent />
-    </>
+    <Stack minHeight={"80vh"} marginTop={7}>
+      <FistPage />
+    </Stack>
   );
 }

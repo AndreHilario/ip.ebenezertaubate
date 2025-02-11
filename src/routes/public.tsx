@@ -7,16 +7,7 @@ export const publicRoutes = [
     element: <Main />,
   },
   {
-    path: "/cadastro",
+    path: "/services",
     element: <Register />,
   },
-  // {
-  //   path: "/live",
-  //   element: <Register />,
-  // },
-  // {
-  //   path: "/cadastro",
-  //   element: <Register />,
-  // },
-
 ];
