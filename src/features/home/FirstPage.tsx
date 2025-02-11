@@ -129,7 +129,6 @@ export default function FistPage() {
           </Button>
         </Grid>
 
-        {/* Outros botões seguem a mesma estrutura */}
         <Grid item sx={{ width: "100%", position: "relative" }}>
           <Button
             variant="outlined"
