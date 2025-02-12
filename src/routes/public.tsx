@@ -1,5 +1,5 @@
-import Register from "../features/Register/Register";
 import Main from "../features/main/Main";
+import ServicesPage from "../features/services";
 
 export const publicRoutes = [
   {
@@ -7,7 +7,7 @@ export const publicRoutes = [
     element: <Main />,
   },
   {
-    path: "/services",
-    element: <Register />,
+    path: "/serviços",
+    element: <ServicesPage />,
   },
 ];

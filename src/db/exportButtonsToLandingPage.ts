@@ -1,4 +1,5 @@
 import profileImage from "../assets/profileImage.jpeg";
+
 export const buttonData = [
   {
     text: "Diagnóstico Personalizado - Agende agora!",
@@ -11,7 +12,7 @@ export const buttonData = [
   },
   {
     text: "Conheça nossos serviços!",
-    onClick: () => window.open("/link-da-sua-aula", "_blank"),
+    onClick: () => { window.location.href = "/serviços" },
     avatar: profileImage,
   },
   {

@@ -28,3 +28,30 @@ export const fourtyPageText = {
 };
 
 export const whatsAppMessage = `Olá Felipe, eu gostaria de saber mais sobre sua assessoria exclusiva!`;
+
+export const cards = [
+  {
+    title: "Planejamento Personalizado",
+    content:
+      "Entenda seus objetivos e sonhos financeiros em detalhes e tenha um plano adaptado às suas necessidades.",
+    emoji: "📊",
+    color: "#003366",
+    textColor: "#FFFFFF",
+  },
+  {
+    title: "Melhores Soluções do Mercado",
+    content:
+      "Acesso às soluções financeiras mais adequadas, exclusivas e alinhadas com seus objetivos de curto, médio e longo prazo.",
+    emoji: "⭐",
+    color: "#003366",
+    textColor: "#FFFFFF",
+  },
+  {
+    title: "Acompanhamento Próximo",
+    content:
+      "Disponibilidade sob medida para ajudá-lo a ajustar seu portfólio e tomar decisões mais inteligentes a longo prazo.",
+    emoji: "🤝",
+    color: "#003366",
+    textColor: "#FFFFFF",
+  },
+];
