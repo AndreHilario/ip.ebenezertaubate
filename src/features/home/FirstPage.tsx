@@ -11,6 +11,7 @@ import profileImage from "../../assets/image.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import WhatsApp from "@mui/icons-material/WhatsApp";
+import { buttonData } from "../../db/exportButtonsToLandingPage";
 
 export default function FistPage() {
   const handleWhatsAppRedirect = () => {
@@ -20,7 +21,10 @@ export default function FistPage() {
     );
   };
   const handleInstagramRedirect = () => {
-    window.open("https://www.instagram.com/felipehilario.investimentos", "_blank");
+    window.open(
+      "https://www.instagram.com/felipehilario.investimentos",
+      "_blank"
+    );
   };
   const handleEmailRedirect = () => {
     window.location.href = "mailto:seu_email@dominio.com";
@@ -30,13 +34,13 @@ export default function FistPage() {
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
-      p={2}
+      p={1}
     >
       {/* Imagem e cabeçalho */}
       <Avatar
         src={profileImage}
         alt="Imagem de perfil"
-        sx={{ width: 120, height: 120, marginBottom: 3 }}
+        sx={{ width: 110, height: 110, marginBottom: 3 }}
       />
       <Typography variant="h6" fontWeight="bold" color={"#D4AF37"}>
         @felipehilario.investimentos
@@ -77,162 +81,57 @@ export default function FistPage() {
         spacing={3}
         sx={{ width: "100%", maxWidth: 600 }}
       >
-        <Grid item sx={{ width: "100%", position: "relative" }}>
-          <Button
-            variant="outlined"
-            sx={{
-              border: "2px solid #fff",
-              color: "white",
-              backgroundColor: "transparent",
-              width: "100%",
-              height: 80, 
-              borderRadius: 50,
-              textTransform: "none",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              paddingLeft: 2,
-              paddingRight: 2, 
-              transition: "all 0.3s ease",
-              "&:hover": {
-                backgroundColor: "white",
-                color: "#0000ff",
-              },
-            }}
-            onClick={handleWhatsAppRedirect}
-          >
-            <Avatar
-              src={profileImage}
-              alt="Ícone botão"
+        {buttonData.map((button, index) => (
+          <Grid item key={index} sx={{ width: "100%", position: "relative" }}>
+            <Button
+              variant="outlined"
               sx={{
-                width: 60, 
-                height: 60,
-                position: "absolute",
-                left: 10,
+                border: "1px solid #fff",
+                color: "white",
+                backgroundColor: "transparent",
+                width: "100%",
+                height: 70,
+                borderRadius: 30,
+                textTransform: "none",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "relative",
+                paddingLeft: 2,
+                paddingRight: 2,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "white",
+                  color: "#0000ff",
+                },
               }}
-            />
-            <span
-              style={{
-                flexGrow: 1,
-                textAlign: "center",
-                fontSize: "14px",
-                fontWeight: "bold",
-                paddingLeft: "70px",
-                paddingRight: "20px",
-              }}
+              onClick={button.onClick}
             >
-              Diagnóstico Personalizado -
-             
-              Agende agora!
-            </span>
-          </Button>
-        </Grid>
-
-        <Grid item sx={{ width: "100%", position: "relative" }}>
-          <Button
-            variant="outlined"
-            sx={{
-              border: "2px solid #fff",
-              color: "white",
-              backgroundColor: "transparent",
-              width: "100%",
-              height: 80,
-              borderRadius: 50,
-              textTransform: "none",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              paddingLeft: 2,
-              paddingRight: 2,
-              transition: "all 0.3s ease",
-              "&:hover": {
-                backgroundColor: "white",
-                color: "#0000ff",
-              },
-            }}
-            // onClick={() => window.open("/link-da-sua-aula", "_blank")}
-          >
-            <Avatar
-              src={profileImage}
-              alt="Ícone botão"
-              sx={{
-                width: 60,
-                height: 60,
-                position: "absolute",
-                left: 10,
-              }}
-            />
-            <span
-              style={{
-                flexGrow: 1,
-                textAlign: "center",
-                fontSize: "14px",
-                fontWeight: "bold",
-                paddingLeft: "80px",
-                paddingRight: "20px",
-              }}
-            >
-              Conheça nossos serviços!
-            </span>
-          </Button>
-        </Grid>
-
-        <Grid item sx={{ width: "100%", position: "relative" }}>
-          <Button
-            variant="outlined"
-            sx={{
-              border: "2px solid #fff",
-              color: "white",
-              backgroundColor: "transparent",
-              width: "100%",
-              height: 80,
-              borderRadius: 50,
-              textTransform: "none",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              paddingLeft: 2,
-              paddingRight: 2,
-              transition: "all 0.3s ease",
-              "&:hover": {
-                backgroundColor: "white",
-                color: "#0000ff",
-              },
-            }}
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/felipe-hilário-cea-549b2b182/",
-                "_blank"
-              )
-            }
-          >
-            <Avatar
-              src={profileImage}
-              alt="Ícone botão"
-              sx={{
-                width: 60,
-                height: 60,
-                position: "absolute",
-                left: 10,
-              }}
-            />
-            <span
-              style={{
-                flexGrow: 1,
-                textAlign: "center",
-                fontSize: "14px",
-                fontWeight: "bold",
-                paddingLeft: "80px",
-                paddingRight: "20px",
-              }}
-            >
-              Linkedin
-            </span>
-          </Button>
-        </Grid>
+              <Avatar
+                src={button.avatar}
+                alt="Ícone botão"
+                sx={{
+                  width: 60,
+                  height: 60,
+                  position: "absolute",
+                  left: 10,
+                }}
+              />
+              <span
+                style={{
+                  flexGrow: 1,
+                  textAlign: "center",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  paddingLeft: "80px",
+                  paddingRight: "20px",
+                }}
+              >
+                {button.text}
+              </span>
+            </Button>
+          </Grid>
+        ))}
       </Grid>
     </Stack>
   );
