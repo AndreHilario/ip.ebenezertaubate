@@ -18,7 +18,7 @@ export default function SecondPage() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        background: "#003366",
+        background: "#2510a3",
         py: 1,
       }}
     >
