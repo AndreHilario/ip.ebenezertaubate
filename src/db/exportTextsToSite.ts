@@ -35,7 +35,7 @@ export const cards = [
     content:
       "Entenda seus objetivos e sonhos financeiros em detalhes e tenha um plano adaptado às suas necessidades.",
     emoji: "📊",
-    color: "#003366",
+    color: "#1f104b",
     textColor: "#FFFFFF",
   },
   {
@@ -43,7 +43,7 @@ export const cards = [
     content:
       "Acesso às soluções financeiras mais adequadas, exclusivas e alinhadas com seus objetivos de curto, médio e longo prazo.",
     emoji: "⭐",
-    color: "#003366",
+    color: "#1f104b",
     textColor: "#FFFFFF",
   },
   {
@@ -51,7 +51,7 @@ export const cards = [
     content:
       "Disponibilidade sob medida para ajudá-lo a ajustar seu portfólio e tomar decisões mais inteligentes a longo prazo.",
     emoji: "🤝",
-    color: "#003366",
+    color: "#1f104b",
     textColor: "#FFFFFF",
   },
 ];

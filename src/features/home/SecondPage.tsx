@@ -18,7 +18,7 @@ export default function SecondPage() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        background: "#2510a3",
+        background: "#170b2a",
         py: 1,
       }}
     >
@@ -35,7 +35,6 @@ export default function SecondPage() {
           sx={{
             textAlign: "center",
             padding: 2,
-            fontFamily: "Montserrat",
             width: "90%",
             maxWidth: "800px",
           }}
@@ -43,23 +42,24 @@ export default function SecondPage() {
           <Typography
             sx={{
               color: "#FFFFFF",
-              fontSize: { xs: "20px", md: "25px" },
-              fontWeight: "800",
+              fontSize: { xs: "24px", md: "25px" },
+              fontWeight: 800,
               lineHeight: { xs: 1.5, md: "38px" },
               mb: 2,
               textTransform: "uppercase",
+              // fontFamily: "'Montserrat', sans-serif",
             }}
           >
             Transforme a sua vida financeira com uma metodologia que funciona!
           </Typography>
 
           <Typography
-            variant="body1"
+            variant="caption"
             sx={{
-              color: "#D4AF37",
-              mb: { xs: 2, md: 3 },
-              fontSize: { xs: "0.875rem", md: "1rem" },
-              fontWeight: "bold"
+              color: "#FFFFFF",
+              mb: { xs: 4, md: 3 },
+              fontSize: { xs: "1.1rem", md: "1rem" },
+              fontWeight: "bold",
             }}
           >
             Realize seus sonhos financeiros com estratégias personalizadas e
@@ -72,8 +72,8 @@ export default function SecondPage() {
               borderRadius: "8px",
               paddingX: "20px",
               paddingY: "8px",
-              mb: 3,
-              mt: 1,
+              mb: 4,
+              mt: 2,
             }}
           >
             <Typography
@@ -112,7 +112,7 @@ export default function SecondPage() {
               fontWeight: "bold",
               transition: "transform 0.3s ease",
               transform: "scale(1)",
-              width: "100%",
+              width: "79%",
               mx: "auto",
               display: "block",
               fontSize: "11px",
@@ -179,10 +179,12 @@ export default function SecondPage() {
               <Box
                 sx={{
                   backgroundColor: card.color,
-                  borderRadius: 2,
-                  p: 1,
+                  borderRadius: 8,
+                  py: 3,
+                  px: 2,
                   textAlign: "center",
-                  maxWidth: { xs: "90%", sm: 350 },
+                  width: "70%",
+                  minHeight: "170px",
                   margin: "0 auto",
                   display: "flex",
                   flexDirection: "column",

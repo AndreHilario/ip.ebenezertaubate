@@ -40,7 +40,7 @@ const ThirdPage = () => {
       {/* Sem as páginas de vendas */}
       <Box
         sx={{
-          backgroundColor: "#003366",
+          backgroundColor: "#1f104b",
           padding: 3,
           marginBottom: 4,
           textAlign: "center",
@@ -72,9 +72,9 @@ const ThirdPage = () => {
         </List>
         <Typography
           variant="body1"
-          sx={{ mt: 3, fontWeight: "bold", color: "#FFFFFF" }}
+          sx={{ mt: 3, color: "#FFFFFF" }}
         >
-          Quanto isso pode custar para o crescimento do seu patrimônio?
+          Quanto isso <span style={{fontWeight: 800}}>pode custar</span> para o <span style={{fontWeight: 800}}>crescimento</span> do seu patrimônio?
         </Typography>
       </Box>
       <Box
@@ -120,7 +120,7 @@ const ThirdPage = () => {
           fontWeight: "bold",
           transition: "transform 0.3s ease",
           transform: "scale(1)",
-          width: "100%",
+          width: "80%",
           mx: "auto",
           display: "block",
           fontSize: "11px",
