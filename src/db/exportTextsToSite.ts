@@ -21,7 +21,6 @@ export const thirdPageText = {
   text6: `5 - Quer tomar melhores decisões financeiras`,
 };
 
-
 export const fourtyPageText = {
   text1: `Chegou a hora de cuidar melhor do seu dinheiro e dos seus investimentos!`,
   text2: `Sim! Quero esse atendimento!`,
@@ -50,6 +49,33 @@ export const cards = [
     title: "Acompanhamento Próximo",
     content:
       "Disponibilidade sob medida para ajudá-lo a ajustar seu portfólio e tomar decisões mais inteligentes a longo prazo.",
+    emoji: "🤝",
+    color: "#1f104b",
+    textColor: "#FFFFFF",
+  },
+];
+
+export const cardsFourtyPage = [
+  {
+    title: "Pessoas em Primeiro Lugar",
+    content:
+      "Nosso foco está em você. Diferente do comum, não vendemos produtos, construímos soluções pensando no que é melhor para o seu futuro financeiro.",
+    emoji: "👥",
+    color: "#1f104b",
+    textColor: "#FFFFFF",
+  },
+  {
+    title: "Reconhecimento no Mercado",
+    content:
+      "São mais de 10 mil clientes atendidos e mais de 6 bilhões de reais sob custódia.",
+    emoji: "🏆",
+    color: "#1f104b",
+    textColor: "#FFFFFF",
+  },
+  {
+    title: "Parceria para a Vida Toda",
+    content:
+      "Construímos relações duradouras, acompanhando você em todas as etapas do caminho para o sucesso financeiro.",
     emoji: "🤝",
     color: "#1f104b",
     textColor: "#FFFFFF",

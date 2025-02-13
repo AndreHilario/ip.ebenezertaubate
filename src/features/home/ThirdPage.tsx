@@ -70,11 +70,10 @@ const ThirdPage = () => {
             </ListItem>
           ))}
         </List>
-        <Typography
-          variant="body1"
-          sx={{ mt: 3, color: "#FFFFFF" }}
-        >
-          Quanto isso <span style={{fontWeight: 800}}>pode custar</span> para o <span style={{fontWeight: 800}}>crescimento</span> do seu patrimônio?
+        <Typography variant="body1" sx={{ mt: 3, color: "#FFFFFF" }}>
+          Quanto isso <span style={{ fontWeight: 800 }}>pode custar</span> para
+          o <span style={{ fontWeight: 800 }}>crescimento</span> do seu
+          patrimônio?
         </Typography>
       </Box>
       <Box
