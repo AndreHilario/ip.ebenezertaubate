@@ -39,7 +39,7 @@ export default function FourtyPage() {
 
         <Grid
           container
-          spacing={5}
+          spacing={2.5}
           sx={{
             display: "flex",
             justifyContent: "center",
