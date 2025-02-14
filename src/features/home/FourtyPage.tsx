@@ -60,7 +60,7 @@ export default function FourtyPage() {
                   justifyContent: "space-between",
                   textAlign: "center",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  border: "2px solid #D4AF37",
+                  border: "5px solid #D4AF37",
                   minHeight: "250px",
                   height: "80%",
                   boxSizing: "border-box",

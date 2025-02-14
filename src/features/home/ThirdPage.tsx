@@ -40,7 +40,7 @@ const ThirdPage = () => {
       {/* Sem as páginas de vendas */}
       <Box
         sx={{
-          backgroundColor: "#1f104b",
+          backgroundColor: "#170b2a",
           padding: 3,
           marginBottom: 4,
           textAlign: "center",

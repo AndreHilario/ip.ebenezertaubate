@@ -1,4 +1,6 @@
 import profileImage from "../assets/profileImage.jpeg";
+import home from "../assets/home.png";
+import backgroundImage from "../assets/background.png";
 
 export const buttonData = [
   {
@@ -12,8 +14,10 @@ export const buttonData = [
   },
   {
     text: "Conheça nossos serviços!",
-    onClick: () => { window.location.href = "/serviços" },
-    avatar: profileImage,
+    onClick: () => {
+      window.location.href = "/serviços";
+    },
+    avatar: home,
   },
   {
     text: "Linkedin",
@@ -22,6 +26,6 @@ export const buttonData = [
         "https://www.linkedin.com/in/felipe-hilário-cea-549b2b182/",
         "_blank"
       ),
-    avatar: profileImage,
+    avatar: backgroundImage,
   },
 ];

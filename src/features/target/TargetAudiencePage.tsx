@@ -78,7 +78,7 @@ const TargetAudiencePage = () => {
         <Typography
           variant="h6"
           sx={{
-            color: "#ffddc1", 
+            color: "#fefefe", 
             fontWeight: "500",
             lineHeight: "1.5",
             textTransform: "uppercase",
@@ -97,8 +97,8 @@ const TargetAudiencePage = () => {
               <Paper
                 elevation={0}
                 sx={{
-                  backgroundColor: "rgba(111, 111, 111, 0.1)",
-                  border: "10px solid rgba(111, 255, 255, 0.2)",
+                  backgroundColor: "#1a1a2e",
+                  border: "5px solid #D4AF37",
                   backdropFilter: "blur(8px)",
                   padding: "20px",
                   borderRadius: "16px",
@@ -149,11 +149,10 @@ const TargetAudiencePage = () => {
       {/* Final com o Botão */}
       <Box sx={{ textAlign: "center", mt: 6 }}>
         <Button
-          variant="contained"
           sx={{
-            backgroundColor: "#fff",
-            borderRadius: "15px",
-            color: "#170b2a",
+            backgroundColor: "#000",
+            borderRadius: "12px",
+            color: "#fff",
             fontWeight: "800",
             transition: "transform 0.3s ease",
             transform: "scale(1)",

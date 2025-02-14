@@ -179,11 +179,11 @@ export default function SecondPage() {
               <Box
                 sx={{
                   backgroundColor: card.color,
-                  borderRadius: 8,
+                  borderRadius: "12px",
                   py: 3,
                   px: 2,
                   textAlign: "center",
-                  width: "70%",
+                  width: "80%",
                   minHeight: "170px",
                   margin: "0 auto",
                   display: "flex",
@@ -191,7 +191,7 @@ export default function SecondPage() {
                   justifyContent: "center",
                   gap: 1,
                   transition: "transform 0.3s ease",
-                  border: "2px solid #D4AF37",
+                  border: "5px solid #D4AF37",
                   "&:hover": {
                     transform: "translateY(-5px)",
                     boxShadow: "0px 8px 12px rgba(212,17555,.3)",

@@ -111,10 +111,10 @@ export default function FistPage() {
                 src={button.avatar}
                 alt="Ícone botão"
                 sx={{
-                  width: 60,
-                  height: 60,
+                  width: 55,
+                  height: 55,
                   position: "absolute",
-                  left: 10,
+                  left: 7,
                 }}
               />
               <span
