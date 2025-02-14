@@ -25,9 +25,10 @@ export default function FourtyPage() {
         }}
       >
         <Typography
+          variant="h2"
           sx={{
             color: "#FFFFFF",
-            fontSize: { xs: "1.2rem", md: "2rem" },
+            fontSize: { xs: "1.3rem", md: "2rem" },
             fontWeight: 600,
             marginBottom: "2rem",
             textTransform: "uppercase",
@@ -56,15 +57,19 @@ export default function FourtyPage() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  justifyContent: "space-between", 
+                  justifyContent: "space-between",
                   textAlign: "center",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                   border: "2px solid #D4AF37",
-                  minHeight: "250px", 
+                  minHeight: "250px",
                   height: "80%",
                   boxSizing: "border-box",
                   "& .MuiTypography-root": {
                     width: "100%",
+                  },
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(212,17555,.3)",
                   },
                 }}
               >

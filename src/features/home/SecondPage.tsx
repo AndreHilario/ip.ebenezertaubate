@@ -109,10 +109,10 @@ export default function SecondPage() {
               backgroundColor: "#D4AF37",
               borderRadius: "15px",
               color: "#000",
-              fontWeight: "bold",
+              fontWeight: "600",
               transition: "transform 0.3s ease",
               transform: "scale(1)",
-              width: "79%",
+              width: "80%",
               mx: "auto",
               display: "block",
               fontSize: "11px",
@@ -120,7 +120,7 @@ export default function SecondPage() {
                 transform: "scale(1.05)",
                 backgroundColor: "#D4AF37",
               },
-              py: { xs: 1, md: 2 },
+              py: 1.5,
             }}
             onClick={handleWhatsAppRedirect}
           >
@@ -194,7 +194,7 @@ export default function SecondPage() {
                   border: "2px solid #D4AF37",
                   "&:hover": {
                     transform: "translateY(-5px)",
-                    boxShadow: "0px 8px 24px rgba(212,17555,.3)",
+                    boxShadow: "0px 8px 12px rgba(212,17555,.3)",
                   },
                 }}
               >

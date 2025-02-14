@@ -116,7 +116,7 @@ const ThirdPage = () => {
           backgroundColor: "#D4AF37",
           borderRadius: "15px",
           color: "#000",
-          fontWeight: "bold",
+          fontWeight: "800",
           transition: "transform 0.3s ease",
           transform: "scale(1)",
           width: "80%",
@@ -128,7 +128,7 @@ const ThirdPage = () => {
             transform: "scale(1.05)",
             backgroundColor: "#D4AF37",
           },
-          py: { xs: 1, md: 2 },
+          py: 1.5,
         }}
         onClick={handleWhatsAppRedirect}
       >

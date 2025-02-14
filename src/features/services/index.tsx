@@ -1,6 +1,8 @@
 import SecondPage from "../home/SecondPage";
 import ThirdPage from "../home/ThirdPage";
 import FourtyPage from "../home/FourtyPage";
+import FeedbackPage from "../feedback/FeedbackPage";
+import TargetAudiencePage from "../target/TargetAudiencePage";
 
 const ServicesPage = () => {
   return (
@@ -8,6 +10,8 @@ const ServicesPage = () => {
       <SecondPage />
       <ThirdPage />
       <FourtyPage />
+      <FeedbackPage />
+      <TargetAudiencePage />
     </>
   );
 };
