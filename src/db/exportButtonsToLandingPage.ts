@@ -1,14 +1,14 @@
 import profileImage from "../assets/profileImage.jpeg";
 import home from "../assets/home.png";
 import backgroundImage from "../assets/background.png";
+import { handleWhatsAppRedirect } from "../services/whatsAppService";
 
 export const buttonData = [
   {
-    text: "Diagnóstico Personalizado - Agende agora!",
+    text: "Diagnóstico Financeiro Gratuito - Agende agora!",
     onClick: () =>
-      window.open(
-        "https://wa.me/5512982245338?text=Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito!",
-        "_blank"
+      handleWhatsAppRedirect(
+        "Quero agendar um diagnóstico financeiro personalizado."
       ),
     avatar: profileImage,
   },

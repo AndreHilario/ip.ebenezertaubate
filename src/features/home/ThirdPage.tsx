@@ -131,7 +131,11 @@ const ThirdPage = () => {
             },
             py: 1.5,
           }}
-          onClick={handleWhatsAppRedirect}
+          onClick={() =>
+            handleWhatsAppRedirect(
+              "Quero agendar um bate papo para conhecer a sua assessoria."
+            )
+          }
         >
           Fale comigo agora!
         </Button>

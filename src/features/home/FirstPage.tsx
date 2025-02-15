@@ -42,7 +42,7 @@ export default function FistPage() {
         alt="Imagem de perfil"
         sx={{ width: 110, height: 110, marginBottom: 3 }}
       />
-      <Typography variant="h6" fontWeight="bold" color={"#D4AF37"}>
+      <Typography variant="h6" fontWeight="bold" color={"#FFF"}>
         @felipehilario.investimentos
       </Typography>
       <Typography

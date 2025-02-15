@@ -23,7 +23,7 @@ export default function SecondPage() {
       }}
     >
       <Container
-         maxWidth="md"
+        maxWidth="md"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -121,7 +121,11 @@ export default function SecondPage() {
               },
               py: 1.5,
             }}
-            onClick={handleWhatsAppRedirect}
+            onClick={() =>
+              handleWhatsAppRedirect(
+                "Olá! Gostaria de saber mais sobre seus serviços."
+              )
+            }
           >
             Agende um diagnóstico gratuito!
           </Button>
@@ -135,18 +139,13 @@ export default function SecondPage() {
             "&::before": {
               content: '""',
               position: "absolute",
-              left: 0,
-              right: 0,
+              left: "50%",
               top: "50%",
+              width: "100vw", // Ocupa toda a largura da tela
               height: "2px",
-              background: `linear-gradient(
-              to right,
-              transparent,
-              yellow,
-              transparent
-            )`,
+              background: `linear-gradient(to right, transparent, yellow, transparent)`,
               opacity: 0.7,
-              animation: "shine 3s ease-in-out infinite",
+              transform: "translateX(-50%)", // Centraliza corretamente
             },
           }}
         >

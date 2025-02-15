@@ -142,12 +142,12 @@ const FeedbackPage = () => {
           ))}
         </Box>
         <Button
-        variant="contained"
+          variant="contained"
           sx={{
-            backgroundColor: "#170b2a",
+            backgroundColor: "#D4AF37",
             borderRadius: "15px",
             color: "#fff",
-            fontWeight: "bold",
+            fontWeight: "800",
             transition: "transform 0.3s ease",
             transform: "scale(1)",
             width: "80%",
@@ -161,7 +161,11 @@ const FeedbackPage = () => {
             py: 1.5,
             mt: 3,
           }}
-          onClick={handleWhatsAppRedirect}
+          onClick={() =>
+            handleWhatsAppRedirect(
+              "Quero agendar uma conversa sobre a sua assessoria financeira."
+            )
+          }
         >
           Vamos Conversar!
         </Button>

@@ -107,6 +107,10 @@ const TargetAudiencePage = () => {
                   alignItems: "center",
                   textAlign: "center",
                   minHeight: "200px",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 8px 12px rgba(212,17555,.3)",
+                  },
                 }}
               >
                 {/* Ícone */}
@@ -150,9 +154,9 @@ const TargetAudiencePage = () => {
       <Box sx={{ textAlign: "center", mt: 6 }}>
         <Button
           sx={{
-            backgroundColor: "#000",
-            borderRadius: "12px",
-            color: "#fff",
+            backgroundColor: "#D4AF37",
+            borderRadius: "15px",
+            color: "#000",
             fontWeight: "800",
             transition: "transform 0.3s ease",
             transform: "scale(1)",
@@ -167,9 +171,13 @@ const TargetAudiencePage = () => {
             },
             py: 1.5,
           }}
-          onClick={handleWhatsAppRedirect}
+          onClick={() =>
+            handleWhatsAppRedirect(
+              "Quero agendar uma conversa sobre a sua assessoria financeira."
+            )
+          }
         >
-          Pronto para começar? Clique aqui e construa o futuro que você merece!
+          Pronto para começar? Clique aqui!
         </Button>
       </Box>
     </Box>

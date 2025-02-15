@@ -28,11 +28,11 @@ export default function FourtyPage() {
           variant="h2"
           sx={{
             color: "#FFFFFF",
-            fontSize: { xs: "1.3rem", md: "2rem" },
-            fontWeight: 600,
+            fontSize: { xs: "18px", md: "20px" },
+            fontWeight: "700",
+            lineHeight: 1.1,
             marginBottom: "2rem",
             textTransform: "uppercase",
-            lineHeight: 1.1,
           }}
         >
           Por que nossos clientes escolhem e recomendam o nosso atendimento?
