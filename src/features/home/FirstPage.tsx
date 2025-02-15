@@ -86,7 +86,7 @@ export default function FistPage() {
             <Button
               variant="outlined"
               sx={{
-                border: "1px solid #fff",
+                border: "3px solid #fff",
                 color: "white",
                 backgroundColor: "transparent",
                 width: "100%",

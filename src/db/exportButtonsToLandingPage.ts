@@ -1,6 +1,6 @@
 import profileImage from "../assets/profileImage.jpeg";
-import home from "../assets/home.png";
-import backgroundImage from "../assets/background.png";
+import linkedIn from "../assets/linkedin.png";
+import services from "../assets/services.jpeg"
 import { handleWhatsAppRedirect } from "../services/whatsAppService";
 
 export const buttonData = [
@@ -17,7 +17,7 @@ export const buttonData = [
     onClick: () => {
       window.location.href = "/serviços";
     },
-    avatar: home,
+    avatar: services,
   },
   {
     text: "Linkedin",
@@ -26,6 +26,6 @@ export const buttonData = [
         "https://www.linkedin.com/in/felipe-hilário-cea-549b2b182/",
         "_blank"
       ),
-    avatar: backgroundImage,
+    avatar: linkedIn,
   },
 ];
