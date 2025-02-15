@@ -69,7 +69,7 @@ const TargetAudiencePage = () => {
             lineHeight: "1.2",
             textTransform: "uppercase",
             mb: "16px",
-            letterSpacing: "1.2px", 
+            letterSpacing: "1.2px",
           }}
         >
           Para Quem É?
@@ -78,7 +78,7 @@ const TargetAudiencePage = () => {
         <Typography
           variant="h6"
           sx={{
-            color: "#fefefe", 
+            color: "#fefefe",
             fontWeight: "500",
             lineHeight: "1.5",
             textTransform: "uppercase",
@@ -153,6 +153,7 @@ const TargetAudiencePage = () => {
       {/* Final com o Botão */}
       <Box sx={{ textAlign: "center", mt: 6 }}>
         <Button
+          variant="contained"
           sx={{
             backgroundColor: "#D4AF37",
             borderRadius: "15px",
@@ -160,7 +161,7 @@ const TargetAudiencePage = () => {
             fontWeight: "800",
             transition: "transform 0.3s ease",
             transform: "scale(1)",
-            width: "80%",
+            width: { xs: "80%", md: "40%" },
             mx: "auto",
             display: "block",
             fontSize: "11px",

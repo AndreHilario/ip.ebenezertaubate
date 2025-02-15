@@ -150,7 +150,7 @@ const FeedbackPage = () => {
             fontWeight: "800",
             transition: "transform 0.3s ease",
             transform: "scale(1)",
-            width: "80%",
+            width: { xs: "80%", md: "40%" },
             mx: "auto",
             display: "block",
             fontSize: "11px",
