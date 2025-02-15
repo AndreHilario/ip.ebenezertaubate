@@ -32,7 +32,7 @@ export default function FourtyPage() {
             fontWeight: 600,
             marginBottom: "2rem",
             textTransform: "uppercase",
-            lineHeight: 1.4,
+            lineHeight: 1.1,
           }}
         >
           Por que nossos clientes escolhem e recomendam o nosso atendimento?
@@ -62,7 +62,7 @@ export default function FourtyPage() {
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                   border: "5px solid #D4AF37",
                   minHeight: "250px",
-                  height: "80%",
+                  height: "100%",
                   boxSizing: "border-box",
                   "& .MuiTypography-root": {
                     width: "100%",

@@ -23,7 +23,7 @@ export default function SecondPage() {
       }}
     >
       <Container
-        maxWidth="xl"
+         maxWidth="md"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -44,22 +44,21 @@ export default function SecondPage() {
               color: "#FFFFFF",
               fontSize: { xs: "24px", md: "25px" },
               fontWeight: 800,
-              lineHeight: { xs: 1.5, md: "38px" },
               mb: 2,
               textTransform: "uppercase",
-              // fontFamily: "'Montserrat', sans-serif",
+              lineHeight: 1.1,
             }}
           >
             Transforme a sua vida financeira com uma metodologia que funciona!
           </Typography>
 
           <Typography
-            variant="caption"
+            variant="subtitle1"
             sx={{
               color: "#FFFFFF",
-              mb: { xs: 4, md: 3 },
               fontSize: { xs: "1.1rem", md: "1rem" },
-              fontWeight: "bold",
+              fontWeight: 500,
+              lineHeight: 1,
             }}
           >
             Realize seus sonhos financeiros com estratégias personalizadas e
@@ -94,9 +93,9 @@ export default function SecondPage() {
             src={image}
             alt="Descrição da imagem"
             sx={{
-              height: "auto",
+              height: { xs: "auto", md: 350 },
               maxWidth: "100%",
-              mb: 5,
+              mb: 3,
               mx: "auto",
               display: "block",
               borderRadius: 2,
@@ -159,7 +158,7 @@ export default function SecondPage() {
             color: "#FFFFFF",
             fontSize: { xs: "18px", md: "20px" },
             fontWeight: "700",
-            lineHeight: { xs: 1.5, md: "38px" },
+            lineHeight: 1.1,
             mb: 2,
             textTransform: "uppercase",
             textAlign: "center",

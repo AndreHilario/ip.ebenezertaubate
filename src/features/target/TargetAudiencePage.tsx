@@ -54,7 +54,7 @@ const TargetAudiencePage = () => {
       sx={{
         background: "#170b2a",
         minHeight: "100vh",
-        paddingY: "2rem",
+        padding: "2rem",
         color: "#fff",
       }}
     >
@@ -65,7 +65,7 @@ const TargetAudiencePage = () => {
           sx={{
             color: "#fff",
             fontSize: { xs: "28px", md: "40px" },
-            fontWeight: "900",
+            fontWeight: "800",
             lineHeight: "1.2",
             textTransform: "uppercase",
             mb: "16px",
