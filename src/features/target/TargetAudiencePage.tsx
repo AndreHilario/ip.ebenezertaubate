@@ -98,7 +98,7 @@ const TargetAudiencePage = () => {
                 elevation={0}
                 sx={{
                   backgroundColor: "#1a1a2e",
-                  border: "5px solid #D4AF37",
+                  border: "2px solid #D4AF37",
                   backdropFilter: "blur(8px)",
                   padding: "20px",
                   borderRadius: "16px",
@@ -106,7 +106,7 @@ const TargetAudiencePage = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   textAlign: "center",
-                  minHeight: "200px",
+                  minHeight: "120px",
                   "&:hover": {
                     transform: "translateY(-5px)",
                     boxShadow: "0px 8px 12px rgba(212,17555,.3)",
@@ -164,7 +164,7 @@ const TargetAudiencePage = () => {
             width: { xs: "80%", md: "40%" },
             mx: "auto",
             display: "block",
-            fontSize: "11px",
+            fontSize: "12px",
             mt: 4,
             "&hover": {
               transform: "scale(1.05)",

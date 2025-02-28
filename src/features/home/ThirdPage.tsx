@@ -38,7 +38,7 @@ const ThirdPage = () => {
         padding: 3,
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Box
           sx={{
             backgroundColor: "#170b2a",
@@ -51,27 +51,25 @@ const ThirdPage = () => {
           <Box display="flex" justifyContent="flex-start" mb={2}>
             <CancelRounded sx={{ fontSize: 40, color: "#FF0000" }} />
           </Box>
-          <Typography
-            sx={{
-              fontWeight: "600",
-              mb: 1,
-              textAlign: "start",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "25px",
-              lineHeight: "2rem",
-            }}
-          >
+          <Typography variant="h3" textAlign={"start"}>
             Sem a Nossa Assessoria de Investimentos:
           </Typography>
           <List>
             {withoutList.map((item, index) => (
               <ListItem key={index} sx={{ padding: 0.1 }}>
                 <Close sx={{ color: "#FF0000" }} />
-                <ListItemText primary={item} sx={{ color: "#FFFFFF", ml: 1 }} />
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{
+                    sx: { typography: { xs: "body2", md: "body1" } },
+                  }}
+                  sx={{ color: "#FFFFFF", ml: 1 }}
+                />
               </ListItem>
             ))}
           </List>
-          <Typography variant="body1" sx={{ mt: 3, color: "#FFFFFF" }}>
+
+          <Typography variant="body2" sx={{ mt: 3, color: "#FFFFFF" }}>
             Quanto isso <span style={{ fontWeight: 800 }}>pode custar</span>{" "}
             para o <span style={{ fontWeight: 800 }}>crescimento</span> do seu
             patrimônio?
@@ -89,24 +87,20 @@ const ThirdPage = () => {
           <Box display="flex" justifyContent="flex-start" mb={2}>
             <CheckCircle sx={{ fontSize: 40, color: "#008000" }} />
           </Box>
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: "600",
-              mb: 1,
-              textAlign: "start",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "25px",
-              lineHeight: "2rem",
-            }}
-          >
+          <Typography variant="h3" textAlign={"start"}>
             Com a Nossa Assessoria Personalizada:
           </Typography>
           <List>
             {withList.map((item, index) => (
               <ListItem key={index} sx={{ padding: 0.1 }}>
                 <CheckCircle sx={{ color: "#008000" }} />
-                <ListItemText primary={item} sx={{ color: "#000", ml: 1 }} />
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{
+                    sx: { typography: { xs: "body2", md: "body1" } },
+                  }}
+                  sx={{ color: "#000", ml: 1 }}
+                />
               </ListItem>
             ))}
           </List>
@@ -120,10 +114,10 @@ const ThirdPage = () => {
             fontWeight: "800",
             transition: "transform 0.3s ease",
             transform: "scale(1)",
-            width: "80%",
+            width: "70%",
             mx: "auto",
             display: "block",
-            fontSize: "11px",
+            fontSize: "12px",
             mt: 4,
             "&hover": {
               transform: "scale(1.05)",

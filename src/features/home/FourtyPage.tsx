@@ -6,13 +6,14 @@ export default function FourtyPage() {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        minHeight: "75vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         background: "#170b2a",
-        padding: "2rem 1rem",
+        py: 4,
+        px: 2
       }}
     >
       <Container
@@ -25,14 +26,11 @@ export default function FourtyPage() {
         }}
       >
         <Typography
-          variant="h2"
           sx={{
             color: "#FFFFFF",
-            fontSize: { xs: "18px", md: "20px" },
-            fontWeight: "700",
-            lineHeight: 1.1,
             marginBottom: "2rem",
             textTransform: "uppercase",
+            typography: { xs: "h4", md: "h3" },
           }}
         >
           Por que nossos clientes escolhem e recomendam o nosso atendimento?
@@ -60,7 +58,7 @@ export default function FourtyPage() {
                   justifyContent: "space-between",
                   textAlign: "center",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  border: "5px solid #D4AF37",
+                  border: "2px solid #D4AF37",
                   minHeight: "250px",
                   height: "100%",
                   boxSizing: "border-box",

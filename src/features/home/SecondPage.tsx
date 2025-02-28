@@ -20,6 +20,7 @@ export default function SecondPage() {
         alignItems: "center",
         background: "#170b2a",
         py: 1,
+        backgroundImage: image
       }}
     >
       <Container
@@ -36,17 +37,14 @@ export default function SecondPage() {
             textAlign: "center",
             padding: 2,
             width: "90%",
-            maxWidth: "800px",
           }}
         >
           <Typography
             sx={{
+              typography: { xs: "h3", md: "h2" },
               color: "#FFFFFF",
-              fontSize: { xs: "24px", md: "25px" },
-              fontWeight: 800,
               mb: 2,
               textTransform: "uppercase",
-              lineHeight: 1.1,
             }}
           >
             Transforme a sua vida financeira com uma metodologia que funciona!
@@ -69,7 +67,6 @@ export default function SecondPage() {
             sx={{
               border: "1px solid #D4AF37",
               borderRadius: "8px",
-              paddingX: "20px",
               paddingY: "8px",
               mb: 4,
               mt: 2,
@@ -114,7 +111,7 @@ export default function SecondPage() {
               width: "80%",
               mx: "auto",
               display: "block",
-              fontSize: "11px",
+              fontSize: "12px",
               "&hover": {
                 transform: "scale(1.05)",
                 backgroundColor: "#D4AF37",
@@ -170,7 +167,7 @@ export default function SecondPage() {
           container
           spacing={3}
           justifyContent="center"
-          sx={{ width: "100%", rowSpacing: { xs: 4, md: 3 } }}
+          sx={{ width: "100%", rowSpacing: { xs: 4, md: 3 }, py: 2 }}
         >
           {cards.map((card, i) => (
             <Grid item key={i} xs={12} sm={10} md={8} lg={6} xl={4}>
@@ -182,14 +179,14 @@ export default function SecondPage() {
                   px: 2,
                   textAlign: "center",
                   width: "80%",
-                  minHeight: "170px",
+                  height: "180px",
                   margin: "0 auto",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
                   gap: 1,
                   transition: "transform 0.3s ease",
-                  border: "5px solid #D4AF37",
+                  border: "2px solid #D4AF37",
                   "&:hover": {
                     transform: "translateY(-5px)",
                     boxShadow: "0px 8px 12px rgba(212,17555,.3)",
@@ -201,7 +198,7 @@ export default function SecondPage() {
                   sx={{
                     color: card.textColor,
                     fontWeight: "bold",
-                    fontSize: { xs: "1rem", md: "1rem" },
+                    fontSize: "1rem",
                     lineHeight: 1.5,
                     mb: 0,
                   }}

@@ -153,7 +153,7 @@ const FeedbackPage = () => {
             width: { xs: "80%", md: "40%" },
             mx: "auto",
             display: "block",
-            fontSize: "11px",
+            fontSize: "12px",
             "&hover": {
               transform: "scale(1.05)",
               backgroundColor: "#000000",

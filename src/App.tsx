@@ -5,10 +5,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { MuiThemeProvider } from "./providers/MuiThemeProvider";
 
 function App() {
   return (
-    <>
+    <MuiThemeProvider>
       <Analytics />
       <SpeedInsights />
       <Router>
@@ -17,7 +18,7 @@ function App() {
           <AppRoutes />
         </ContextProvider>
       </Router>
-    </>
+    </MuiThemeProvider>
   );
 }
 

@@ -86,7 +86,7 @@ export default function FistPage() {
             <Button
               variant="outlined"
               sx={{
-                border: "3px solid #fff",
+                border: "1px solid #fff",
                 color: "white",
                 backgroundColor: "transparent",
                 width: "100%",
@@ -125,6 +125,7 @@ export default function FistPage() {
                   fontWeight: "bold",
                   paddingLeft: "80px",
                   paddingRight: "20px",
+                  textWrap: "wrap"
                 }}
               >
                 {button.text}
