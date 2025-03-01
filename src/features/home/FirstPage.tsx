@@ -121,7 +121,7 @@ export default function FistPage() {
                 style={{
                   flexGrow: 1,
                   textAlign: "center",
-                  fontSize: "14px",
+                  fontSize: "13px",
                   fontWeight: "bold",
                   paddingLeft: "80px",
                   paddingRight: "20px",

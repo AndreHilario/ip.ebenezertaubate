@@ -5,7 +5,7 @@ import { handleWhatsAppRedirect } from "../services/whatsAppService";
 
 export const buttonData = [
   {
-    text: "Diagnóstico Financeiro Gratuito - Agende agora!",
+    text: "Diagnóstico Financeiro Gratuito!",
     onClick: () =>
       handleWhatsAppRedirect(
         "Quero agendar um diagnóstico financeiro personalizado."
